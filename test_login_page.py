@@ -12,7 +12,7 @@ def test_login_form(browser):
     page.open()
     page.should_be_login_form()
 
-def test_registration_form(browser):
+def test_register_form(browser):
     link = 'http://selenium1py.pythonanywhere.com/en-gb/accounts/login/'
     page=LoginPage(browser,link)
     page.open()
