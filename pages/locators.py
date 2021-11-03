@@ -9,3 +9,9 @@ class LoginPageLocators:
 
 class ProductPageLocators:
     ADD_TO_BASKET_BUTTON=(By.CSS_SELECTOR,'.btn.btn-lg.btn-primary.btn-add-to-basket')
+    PRODUCT_NAME=(By.CSS_SELECTOR,'.col-sm-6.product_main h1')
+    PRODUCT_PRICE=(By.CSS_SELECTOR,'.col-sm-6.product_main p')
+    PRODUCT_NAME_FROM_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(1) .alertinner strong')
+    PRODUCT_PRICE_FROM_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(3) .alertinner strong')
+    PRODUCT_ADDED_TO_BASKET_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(1)')
+    PRODUCT_BASKET_PRICE_MESSEGE=(By.CSS_SELECTOR,'#messages div:nth-child(3)')
