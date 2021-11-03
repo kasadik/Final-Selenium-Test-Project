@@ -1,9 +1,9 @@
-import time
-
 from pages.product_page import ProductPage
+import pytest
 
-def test_add_product_to_basket(browser):
-    link='http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=newYear2019'
+@pytest.mark.parametrize('link', [pytest.param(i,marks=pytest.mark.xfail) if i==7 else i for i in range(10)])
+def test_add_product_to_basket(browser,link):
+    link=f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{link}"
     page=ProductPage(browser,link)
     page.open()
     page.add_product_to_basket()
