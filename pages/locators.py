@@ -15,3 +15,4 @@ class ProductPageLocators:
     PRODUCT_PRICE_FROM_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(3) .alertinner strong')
     PRODUCT_ADDED_TO_BASKET_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(1)')
     PRODUCT_BASKET_PRICE_MESSEGE=(By.CSS_SELECTOR,'#messages div:nth-child(3)')
+    PRODUCT_SUCCESS_MESSAGE=(By.ID,'#messages div')

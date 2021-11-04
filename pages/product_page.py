@@ -24,3 +24,9 @@ class ProductPage(BasePage):
         product_added_to_basket_message=self.browser.find_element(*ProductPageLocators.PRODUCT_BASKET_PRICE_MESSEGE)
         assert product_added_to_basket_message, 'Product basket price_massage is missing'
 
+    def should_not_be_success_message(self):
+
+        assert self.is_not_element_preset(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE), 'Message is present'
+
+    def should_message_be_disappeared(self):
+        assert self.is_element_disappeared(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE), 'Message is not dissapered'
