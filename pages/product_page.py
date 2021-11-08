@@ -14,7 +14,7 @@ class ProductPage(BasePage):
     def should_be_basket_price_the_same(self):
         product_price=self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         product_price_from_massage = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_FROM_MESSAGE).text
-        assert product_price == product_price_from_massage
+        assert product_price == product_price_from_massage, 'Price is not the same'
 
     def should_be_product_added_to_basket_massage(self):
         product_added_to_basket_message=self.browser.find_element(*ProductPageLocators.PRODUCT_ADDED_TO_BASKET_MESSAGE)
