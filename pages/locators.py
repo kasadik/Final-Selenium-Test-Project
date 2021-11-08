@@ -16,3 +16,7 @@ class ProductPageLocators:
     PRODUCT_ADDED_TO_BASKET_MESSAGE=(By.CSS_SELECTOR,'#messages div:nth-child(1)')
     PRODUCT_BASKET_PRICE_MESSEGE=(By.CSS_SELECTOR,'#messages div:nth-child(3)')
     PRODUCT_SUCCESS_MESSAGE=(By.ID,'#messages div')
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
