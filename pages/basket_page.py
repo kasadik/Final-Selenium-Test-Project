@@ -1,6 +1,5 @@
 from pages.base_page import BasePage
 from pages.locators import BasketPageLocators
-from selenium.common.exceptions import NoSuchElementException
 
 class BasketPage(BasePage):
 
@@ -12,4 +11,4 @@ class BasketPage(BasePage):
         full_text=self.browser.find_element(*BasketPageLocators.BASKET_EMPTY_TEXT).text
         link_text=self.browser.find_element(*BasketPageLocators.BASKET_EMPTY_CONTINUE_SHOPPING_LINK).text
         full_text=full_text.replace(link_text,'').rstrip()
-        assert full_text=='Your basket is empty.'
+        assert full_text=='Your basket is empty.','Empty basket text is missing'

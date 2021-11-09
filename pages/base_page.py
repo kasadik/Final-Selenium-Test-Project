@@ -1,6 +1,4 @@
 import math
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
@@ -45,6 +43,10 @@ class BasePage:
 
     def open(self):
         self.browser.get(self.url)
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
 
     def should_be_login_link(self):
             assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
